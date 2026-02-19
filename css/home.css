@@ -1,0 +1,211 @@
+/* Homepage design overrides — match luxury-car-hire.html design system
+   Content unchanged; typography, colors, spacing aligned with fleet page */
+
+/* ── Font hierarchy (same as luxury-car-hire) ── */
+.main-wrapper h1,
+.main-wrapper h2,
+.home_hire_specialists-section .heading,
+.home_car_list_section .heading,
+.home_our_values_section .heading,
+.home_fleet_tailored-section .heading,
+.home_chauffeur-section .heading,
+.home_booking_process-section .heading,
+.home_booking-section .heading {
+  font-family: 'Playfair Display', serif !important;
+  color: #1a1a1a;
+}
+
+.main-wrapper .text-size-large,
+.main-wrapper .text-size-regular {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Section labels / eyebrows → Montserrat gold uppercase */
+.home-section-label,
+.home_hire_specialists-section .text-size-small,
+.home_car_list_section .text-size-small,
+.home_our_values_section .text-size-small {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #D7B65D !important;
+}
+
+/* ── Hero (fleet-hero style overlay on video) ── */
+.section_home_header.home-banner {
+  position: relative;
+}
+.section_home_header.home-banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(10,10,10,0.75) 0%, rgba(26,26,26,0.5) 50%, rgba(15,15,15,0.6) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.section_home_header.home-banner .home_header_component,
+.section_home_header.home-banner .container-7 {
+  position: relative;
+  z-index: 2;
+}
+
+.hero_top-content {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #D7B65D !important;
+}
+
+.homepage-banner-text {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  line-height: 1.15 !important;
+}
+
+.text-gradient {
+  -webkit-text-fill-color: #D7B65D !important;
+  background-image: none !important;
+  background-clip: unset !important;
+}
+
+/* Hero buttons → fleet-hero-btn styles (Get quote = gold primary) */
+.homepage-banner-btn-grp .button.is-secondaryy.is-primary {
+  background: #D7B65D !important;
+  color: #0a0a0a !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  padding: 0.9rem 2.2rem !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s;
+}
+.homepage-banner-btn-grp .button.is-secondaryy.is-primary:hover {
+  opacity: 0.88;
+}
+
+/* ── Google review section — match luxury aesthetic ── */
+.home_google-review-section {
+  background: #f7f5f2;
+  border-bottom: 1px solid #e8e0d0;
+}
+.home_google-review-section .review-star-box .w-embed path {
+  fill: #D7B65D;
+}
+.home_google-review-section .text-size-large {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.2em !important;
+  color: #D7B65D !important;
+}
+
+/* ── Car list / fleet cards — match fleet-card style ── */
+.home_car_list_section .home_our_value-card,
+.home_car_list_section [class*="card"] {
+  border: 1px solid #ede8de;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.home_car_list_section .home_our_value-card:hover,
+.home_car_list_section [class*="card"]:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+/* Our values section — fleet-why dark style ── */
+.home_our_values_section.taste,
+.home_chauffeur-section,
+.home_booking_process-section {
+  background: #0a0a0a !important;
+  position: relative;
+  overflow: hidden;
+}
+.home_our_values_section.taste::before,
+.home_chauffeur-section::before,
+.home_booking_process-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at center top, rgba(215,182,93,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.home_our_values_section .heading,
+.home_chauffeur-section .heading,
+.home_booking_process-section .heading {
+  color: #fff !important;
+}
+.home_our_values_section .text-size-small,
+.home_chauffeur-section .text-size-small,
+.home_booking_process-section .text-size-small {
+  color: #D7B65D !important;
+}
+.home_our_values_section .text-size-regular,
+.home_our_values_section p,
+.home_chauffeur-section .text-size-regular,
+.home_chauffeur-section p,
+.home_booking_process-section .text-size-regular,
+.home_booking_process-section p {
+  color: rgba(255,255,255,0.7) !important;
+}
+.home_our_value-card {
+  background: #111 !important;
+  border: 1px solid rgba(215,182,93,0.2) !important;
+}
+.home_our_value-card .heading,
+.home_our_value-card h3,
+.home_our_value-card h4 {
+  color: #fff !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.home_our_value-card p,
+.home_our_value-card .text-size-regular {
+  color: rgba(255,255,255,0.6) !important;
+}
+.our-value-svg {
+  color: #D7B65D !important;
+}
+
+/* Booking section — fleet-booking dark style ── */
+.home_booking-section:not(.hide) {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0f0f0f 100%) !important;
+  position: relative;
+}
+.home_booking-section .heading,
+.home_booking-section h2,
+.home_booking-section h3 {
+  color: #fff !important;
+}
+.home_booking-section .text-size-regular,
+.home_booking-section p {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* CTA / primary buttons across home — gold ── */
+.main-wrapper .button.is-primary,
+.main-wrapper .button.is-secondaryy.is-primary {
+  background: #D7B65D !important;
+  background-image: none !important;
+  color: #0a0a0a !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  border: none !important;
+}
+.main-wrapper .button.is-primary:hover,
+.main-wrapper .button.is-secondaryy.is-primary:hover {
+  background: #c4a44a !important;
+  opacity: 0.95;
+}
+
+/* Divider accent ── */
+.home-divider {
+  width: 48px;
+  height: 2px;
+  background: #D7B65D;
+  margin: 0.75rem 0 1.25rem;
+}
