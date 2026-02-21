@@ -56,6 +56,7 @@
   letter-spacing: 0.25em !important;
   text-transform: uppercase !important;
   color: #D7B65D !important;
+  text-align: center !important;
 }
 
 .homepage-banner-text {
@@ -64,6 +65,15 @@
   font-weight: 400 !important;
   color: #fff !important;
   line-height: 1.15 !important;
+  text-align: center !important;
+}
+
+.home_header_component {
+  text-align: center;
+}
+
+.button-group.homepage-banner-btn-grp {
+  justify-content: center !important;
 }
 
 .text-gradient {
@@ -105,7 +115,53 @@
   color: #D7B65D !important;
 }
 
+/* ── Hire Specialists section ── */
+.home_hire_specialists-section {
+  background: #fff;
+  padding: 72px 0;
+}
+.home_hire_specialists-section h2,
+.home_hire_specialists-section .heading-3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1.25rem;
+}
+.home_hire_specialists-section .text-size-medium,
+.home_hire_specialists-section p {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.85 !important;
+  color: #444 !important;
+}
+.home_hire_specialists-section .hire_specialists-image {
+  border-radius: 4px;
+  object-fit: cover;
+}
+.gold-link {
+  color: #D7B65D !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.gold-link:hover {
+  opacity: 0.8;
+}
+
 /* ── Car list / fleet cards — match fleet-card style ── */
+.home_car_list_section {
+  background: #fafaf8;
+  padding: 60px 0;
+}
+.home_car_list_section h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.5rem, 3vw, 2rem) !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 2rem;
+}
 .home_car_list_section .home_our_value-card,
 .home_car_list_section [class*="card"] {
   border: 1px solid #ede8de;
@@ -117,7 +173,181 @@
   transform: translateY(-3px);
 }
 
-/* Our values section — fleet-why dark style ── */
+/* ── Homepage car cards — identical to fleet-card on luxury-car-hire page ── */
+.home_single_car-cms {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1200px) { .home_single_car-cms { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .home_single_car-cms { grid-template-columns: 1fr; } }
+
+/* The w-dyn-item wrappers must stretch to fill the grid cell */
+.home_single_car-cms > div,
+.home_single_car-cms > [role="listitem"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.home_car_details-card {
+  background: #fff;
+  border: 1px solid #ede8de;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.home_car_details-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+/* Image area — 4:3 like fleet-card */
+.car_details_image-wrapper,
+.car_details_image-wrapper.homepage-topcars {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f5f2ec;
+}
+.car_details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.home_car_details-card:hover .car_details-image {
+  transform: scale(1.04);
+}
+
+/* Body area */
+.car_details_top_content {
+  padding: 1.25rem 1.5rem 0.5rem;
+  flex: 1;
+}
+
+/* Car name — Playfair like fleet-card-name, left aligned */
+.home_car_details-card h3,
+.home_car_details-card .text-size-large {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  letter-spacing: 0.02em !important;
+  text-align: left !important;
+  text-transform: none !important;
+  line-height: 1.3 !important;
+  margin: 0 0 0.5rem !important;
+}
+
+/* Description */
+.car-details-p {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.82rem !important;
+  color: #555 !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
+}
+
+/* Bottom meta bar */
+.car_details_bottom_wrapper {
+  padding: 0 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.car-location-wrapper.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-top: 1px solid #f0ebe0;
+  border-bottom: 1px solid #f0ebe0;
+}
+.car-location-wrapper.home .div-block-20 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.car-location-wrapper.home .car-details-p {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  color: #888 !important;
+  text-transform: uppercase !important;
+}
+.color-text {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.75rem !important;
+  color: #888 !important;
+  text-transform: capitalize !important;
+}
+
+/* Price block */
+.car_pricing-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+.car-pricing-content {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+.car_pricing-wrapper .text-size-regular,
+.car-pricing-content .text-size-regular {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.78rem !important;
+  color: #555 !important;
+  font-weight: 400 !important;
+}
+.car-pricing-content .text-size-regular.text-weight-semibold:last-child {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
+}
+.car_pricing-wrapper .car-details-p {
+  font-size: 0.75rem !important;
+  color: #888 !important;
+}
+
+/* "View Details" style button at bottom of each card — like fleet-card-btn */
+.home_car_details-card::after {
+  content: 'View Details';
+  display: block;
+  text-align: center;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 1.5rem 1.5rem;
+}
+.home_car_details-card:hover::after {
+  background: #D7B65D;
+  color: #0a0a0a;
+}
+
+/* Section heading above each car group */
+.home_singlecar_list-wrapper h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem) !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  text-align: left !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ── Our values section — fleet-why dark style ── */
 .home_our_values_section.taste,
 .home_chauffeur-section,
 .home_booking_process-section {
@@ -155,6 +385,11 @@
 .home_our_value-card {
   background: #111 !important;
   border: 1px solid rgba(215,182,93,0.2) !important;
+  transition: box-shadow 0.25s, border-color 0.25s !important;
+}
+.home_our_value-card:hover {
+  border-color: rgba(215,182,93,0.45) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3) !important;
 }
 .home_our_value-card .heading,
 .home_our_value-card h3,
@@ -169,8 +404,156 @@
 .our-value-svg {
   color: #D7B65D !important;
 }
+/* Value section headings on dark */
+.home_our_values_section h2 {
+  font-family: 'Playfair Display', serif !important;
+  color: #fff !important;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  font-weight: 400 !important;
+}
 
-/* Booking section — fleet-booking dark style ── */
+/* ── Fleet tailored section (split image/text rows) ── */
+.home_fleet_tailored-section {
+  background: #fff;
+  padding: 72px 0;
+}
+.home_fleet_tailored-section h2,
+.home_fleet_tailored-top-content h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem) !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  line-height: 1.2 !important;
+}
+.home_fleet_tailored-section h3,
+.luxury-bride-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem) !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  line-height: 1.25 !important;
+  margin-bottom: 0.75rem;
+}
+.home_fleet_tailored-section p,
+.home_fleet_tailored-content-p,
+.luxury-bride-details {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.85 !important;
+  color: #555 !important;
+}
+.home_fleet_tailored-image {
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+.home_fleet_tailored-image-wrapper {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.home_fleet_tailored-image-wrapper:hover .home_fleet_tailored-image {
+  transform: scale(1.03);
+}
+.fleet-tailored-p-wrapper p,
+.fleet-tailored-p-wrapper .text-low {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.1rem !important;
+  color: #555 !important;
+  line-height: 1.7 !important;
+}
+
+/* ── Chauffeur services section ── */
+.home_chauffeur-section h2 {
+  font-family: 'Playfair Display', serif !important;
+  color: #fff !important;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  font-weight: 400 !important;
+}
+.home_chauffeur-section h4,
+.services-title {
+  font-family: 'Playfair Display', serif !important;
+  color: #fff !important;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+}
+.chauffeur_services-card {
+  background: #111 !important;
+  border: 1px solid rgba(215,182,93,0.2) !important;
+  transition: border-color 0.25s, box-shadow 0.25s !important;
+  overflow: hidden;
+}
+.chauffeur_services-card:hover {
+  border-color: rgba(215,182,93,0.45) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3) !important;
+}
+.chauffeur_services-image {
+  transition: transform 0.4s ease;
+  width: 100%;
+  object-fit: cover;
+}
+.chauffeur_services-card:hover .chauffeur_services-image {
+  transform: scale(1.04);
+}
+.chauffeur_services-content-wrapper p,
+.chauffeur_services-content-wrapper .text-size-regular {
+  font-family: 'Poppins', sans-serif !important;
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 0.88rem !important;
+}
+.home_chauffeur-top-content-copy p,
+.home_chauffeur-section .fleet-tailored-p-wrapper p {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.1rem !important;
+  color: rgba(255,255,255,0.65) !important;
+  line-height: 1.7 !important;
+}
+
+/* ── Booking process section ── */
+.home_booking_process-section h2 {
+  font-family: 'Playfair Display', serif !important;
+  color: #fff !important;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  font-weight: 400 !important;
+}
+.home_booking_process-card {
+  background: #111 !important;
+  border: 1px solid rgba(215,182,93,0.2) !important;
+  transition: border-color 0.25s, box-shadow 0.25s !important;
+}
+.home_booking_process-card:hover {
+  border-color: rgba(215,182,93,0.45) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25) !important;
+}
+.home_booking_process-number {
+  border: 1px solid rgba(215,182,93,0.35);
+  color: #D7B65D !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.5rem !important;
+}
+.home_booking_process-number p {
+  color: #D7B65D !important;
+  font-family: 'Cormorant Garamond', serif !important;
+}
+.home_booking_process-card h3,
+.seamless-title {
+  font-family: 'Playfair Display', serif !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+}
+.home_booking_process-card p,
+.home_booking_process-card .text-low {
+  font-family: 'Poppins', sans-serif !important;
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 0.88rem !important;
+}
+/* Booking process SVG icons — tint to gold */
+.home_booking_process-icon path {
+  fill: #D7B65D !important;
+  stroke: #D7B65D;
+}
+
+/* ── Booking section — fleet-booking dark style ── */
 .home_booking-section:not(.hide) {
   background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0f0f0f 100%) !important;
   position: relative;
@@ -179,13 +562,36 @@
 .home_booking-section h2,
 .home_booking-section h3 {
   color: #fff !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 400 !important;
 }
 .home_booking-section .text-size-regular,
 .home_booking-section p {
   color: rgba(255,255,255,0.7) !important;
 }
+/* Form labels and inputs in booking section */
+.home_booking-section label {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.6) !important;
+}
+.home_booking-section input,
+.home_booking-section select,
+.home_booking-section textarea {
+  border: 1px solid rgba(215,182,93,0.25) !important;
+  background: rgba(255,255,255,0.05) !important;
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+.home_booking-section input:focus,
+.home_booking-section select:focus {
+  border-color: #D7B65D !important;
+  outline: none;
+}
 
-/* CTA / primary buttons across home — gold ── */
+/* ── CTA / primary buttons across home — gold ── */
 .main-wrapper .button.is-primary,
 .main-wrapper .button.is-secondaryy.is-primary {
   background: #D7B65D !important;
@@ -202,10 +608,75 @@
   opacity: 0.95;
 }
 
-/* Divider accent ── */
+/* ── FAQ section ── */
+.faq-section {
+  background: #fafaf8;
+  padding: 72px 0;
+}
+.faq-section h2,
+.heading-56 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+}
+.question-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+}
+.faq-question-bar {
+  border-bottom: 1px solid #e8e0d0 !important;
+}
+.faq-paragraph {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.9rem !important;
+  color: #555 !important;
+  line-height: 1.85 !important;
+}
+.faq-circle {
+  border: 1px solid rgba(215,182,93,0.4) !important;
+  background: rgba(215,182,93,0.06) !important;
+}
+
+/* ── Divider accent ── */
 .home-divider {
   width: 48px;
   height: 2px;
   background: #D7B65D;
   margin: 0.75rem 0 1.25rem;
+}
+
+/* ── Google review star fix — unify to brand gold ── */
+.reviewer-star-content .w-embed path,
+.reviewer-start-box path {
+  fill: #D7B65D !important;
+}
+
+/* ── Slider nav dots — gold active ── */
+.w-slider-nav-invert > div.w-active {
+  background-color: #D7B65D !important;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 991px) {
+  .home_hire_specialists-section {
+    padding: 48px 0;
+  }
+  .home_fleet_tailored-section {
+    padding: 48px 0;
+  }
+  .faq-section {
+    padding: 48px 0;
+  }
+}
+@media (max-width: 767px) {
+  .homepage-banner-text {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+  .home_hire_specialists-section h2,
+  .home_hire_specialists-section .heading-3 {
+    font-size: 1.7rem !important;
+  }
 }
